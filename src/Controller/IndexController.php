@@ -17,7 +17,6 @@ class IndexController extends AbstractController
             'services' => ['Expeditions', 'cruises']
         ]);
     }
-
     /**
      * @Route("/malmo")
      */
