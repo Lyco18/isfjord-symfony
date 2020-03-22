@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h1>{{ boats }}</h1>
+
+<h3>Services: ({{ services|length }})</h3>
+<ul>
+    {% for service in services %}
+        <li>{{ service }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
