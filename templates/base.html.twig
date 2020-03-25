@@ -3,10 +3,44 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        {% endblock %}
     </head>
     <body>
+        <nav class="navbar navbar-light bg-light" style="height: 100px;">
+            <div class="navbar-inner">
+                <a href="{{ path('malmo-homepage') }}">Home</a>
+                <a href="{{ path('malmo-malmo') }}">Malmö</a>
+                <a href="{{ path('malmo-charter') }}">Charter Our Ships</a>
+                <a href="{{ path('malmo-options') }}">Cruise Options</a>
+                <a href="{{ path('malmo-contact') }}">Contact</a>
+                <a href="{{ path('malmo-gallery') }}">Gallery</a>
+            </div>
+          </a>
+        </nav>
         {% block body %}{% endblock %}
+        <footer>
+            <div class="footer-outer-wrap">
+                <div class="footer-inner-wrap">
+                <div class="footer-col-1">
+                     <h2>About</h2>
+                     <p>About Isfjord AB</p>
+                </div>
+                <div class="footer-col-2">
+                    <h2>Social</h2>
+                    <p>Social Accounts of Isfjord</p>
+                </div>
+                <div class="footer-col-3">
+                    <h2>Contact</h2>
+                    <p>Contact Details of Isfjord</p>
+                </div>
+                </div>
+                <hr>
+                <br>
+                <div class="copyright">© Copyright 2020 Cocozza</div>
+            </div>
+        </footer>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
