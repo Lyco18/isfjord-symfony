@@ -45,11 +45,4 @@ class IndexController extends AbstractController
     {
         return $this->render('views/contact.html.twig');
     }
-    /**
-     * @Route("/gallery", name="malmo-gallery")
-     */
-    public function gallery()
-    {
-        return $this->render('views/gallery.html.twig');
-    }
 }

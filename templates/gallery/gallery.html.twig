@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}Malmö{% endblock %}
+{% block body %}
+<div class="flex-center position-ref">
+    <div class="content">
+        <div class="title m-b-md">
+            <div class="gallery">
+                <div class="column">
+                    {% for photo in photos %}
+                        <img src="{{
+                        asset(photo.photo) }}"></img>
+                    {% endfor %}
+                </div>
+                <div class="column">
+                    {% for photo in photos %}
+                        <img src="{{
+                        asset(photo.photo) }}"></img>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
